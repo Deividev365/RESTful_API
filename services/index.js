@@ -10,6 +10,13 @@ app.get('/',(req, res) => {
 
 });
 
+app.get('/test',(req, res) => {
+
+    res.send(`Node and express running on port: ${PORT}`);
+
+});
+
+
 app.listen(PORT, () => {
     
     console.log(`Your server is running on port: ${PORT}`);
