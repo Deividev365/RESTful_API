@@ -10,7 +10,7 @@ const PORT = 3000;
 // mongo connection
 
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost:27017/CRMdb", {useNewUrlParser: true});
+mongoose.connect("mongodb://localhost:27017", {useNewUrlParser: true});
 
 
 // body parser setup
