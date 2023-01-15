@@ -1,25 +1,18 @@
 import mongoose from "mongoose";
-import {contactSchema} from '../models/crmModel';
+import {ContactSchema} from '../models/crmModel';
 
-const Contact = mongoose.model("Contact Schema", contactSchema )
+const Contact = mongoose.model("Contact", ContactSchema);
 
 
 export const addNewContact = (req, res) => {
 
-
     let newContact = new Contact(req.body);
 
-    newContact.save(err, Contact => {
-        
+    newContact.save((err, contact) => {
         if(err) {
             res.send(err);
-
-        } else {
-
-            res.json(Contact)
         }
-    })
+        res.json(contact)
+    });
 
-
-
-}
+};
