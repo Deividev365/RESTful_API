@@ -9,10 +9,13 @@ export const addNewContact = (req, res) => {
     let newContact = new Contact(req.body);
 
     newContact.save((err, contact) => {
-        if(err) {
-            res.send(err);
-        }
-        res.json(contact)
+       if(err) {
+        res.send(err);
+
+       } else {
+
+           res.json(contact)
+       }
     });
 
 };
