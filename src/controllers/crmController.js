@@ -61,12 +61,9 @@ export const updateContact = (req, res) => {
 
             res.json(Contact)
         }
-
-
     });
 
 }
-
 
 export const deleteContact = (req, res) => {
 
@@ -77,7 +74,7 @@ export const deleteContact = (req, res) => {
             
         } else {
 
-            res.json(`Sucessfully deleted ID: ${req.params.contactId} `  )
+            res.json(`Sucessfully deleted ID: ${req.params.contactId}`)
         }
     })
 }
